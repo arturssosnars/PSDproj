@@ -12,13 +12,15 @@ data class Cell(var selected: Boolean, var blewUp: Boolean = false)
 
 class MainActivity : AppCompatActivity() {
 
+    private val dimensionSize = 5
+
     private val items: MutableList<Cell> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        for (a in 0..24) {
+        for (a in 1..dimensionSize * dimensionSize) {
             items.add(Cell(false))
         }
 
